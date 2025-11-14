@@ -1,0 +1,48 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/xmldb_suiyue?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true
+    username: root
+    password: ${DB_PASSWORD:your_password_here}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+ALIYUN:
+  ACCESS_KEY_ID: ${ALIYUN_ACCESS_KEY_ID:your_access_key_id_here}
+  ACCESS_KEY_SECRET: ${ALIYUN_ACCESS_KEY_SECRET:your_access_key_secret_here}
+  URL: mt.aliyuncs.com
+file:
+  homePath: D:\workspace\dbxmlTool\src\main\resources\
+  confPath: D:\workspace\dbxmlTool\src\main\resources\CONF\
+  cltDataPath: D:\workspace\dbxmlTool\data\DATA\CLT_DATA\
+  svrDataPath: D:\workspace\dbxmlTool\data\DATA\SVR_DATA\
+  worldSvrDataPath: D:\workspace\dbxmlTool\data\DATA\SVR_DATA\Worlds\
+  exportDataPath: D:\workspace\dbxmlTool\data\TEMP\
+world:
+  specialTabName: world__npc_spawn__territory__npcs,world__npc_spawn__territory__npcs__npc,world__npc_spawn__territory__npcs__party,world__npc_spawn__territory__npcs__party__members,world__npc_spawn__territory__spawn_group_list__s_g__n,world__npc_spawn__territory__spawn_group_list__s_g__n__npc,world__flying_zones__flying_zone__points_info,world__flying_zones__flying_zone,world__npc_spawn__territory__condition_info_list__c_i,world__harvest_spawn__territory,world__npc_spawn__territory__condition_info_list__c_i__s_g_l,world__npc_spawn__territory__c_i_l__c_i__s_g_l__s_g,world__npc_spawn__territory__c_i_l__c_i__s_g_l__s_g__n__p__m,world__npc_spawn__territory__c_i_l__c_i__s_g_l__s_g__npcs__n,world__npc_spawn__territory__points_info,world__npc_spawn__territory__spawn_group_list__spawn_group,world__harvest_spawn__territory__sources__source,world__direct_portals__direct_portal,world__npc_spawn__territory__spawn_group_list,world__npc_spawn__territory__spawn_group_list__s_g__n__p__m,world__npc_spawn__territory__spawn_group_list__s_g__n__party,world__questscript_area,world__npc_spawn__territory__condition_info_list,world__npc_spawn__territory,world__limitareas__limitarea,world__limitareas__limitarea__points_info,world__generalarea,world__generalarea__points_info,world__windboxs__windbox,world__windboxs__windbox__points_info,world__legion_dominion_areas__legion_dominion_area,world__legion_dominion_areas__legion_dominion_area__p_i,world__resurrect_area,world__resurrect_area__points_info,world__activate_skill_areas__activate_skill_area,world__activate_skill_areas__activate_skill_area__p_i,world__npc_spawn__territory__c_i_l__c_i__s_g_l__s_g__npcs__p,world__riding_zones__riding_zone__points_info,world__movingcollision,world__movingcollision__points_info
+xmlPath:
+  xmldb_suiyue: D:\AionReal58\AionMap\XML,D:\客户端补丁\L10N\CHS\Data\strings,D:\AionReal58\AionMap\客户端XML\data\China
+  xmldb: null
+insight:
+  checkDatabaseSync: false
+ai:
+  qwen:
+    apikey: sk-4a85006d9f9d44bcaaa40803b33e9467
+    model: qwen-plus
+  doubao:
+    apikey: 288cba75-5732-4c82-91a2-f29915f81012
+    model: doubao-seed-1-6-250615
+  kimi:
+    apikey: sk-4a85006d9f9d44bcaaa40803b33e9467
+    model: Moonshot-Kimi-K2-Instruct
+  deepseek:
+    apikey: sk-4a85006d9f9d44bcaaa40803b33e9467
+    model: deepseek-r1
+  promptKey:
+    common:
+    - 请你帮我改写以下内容（使用!@#分割），将其内容替换为《哈利波特》风格的内容，直接返回结果,形如输入a!@#b，返回c!@#d
+    - abc
+    - 123
+    client_strings_item@body: 你是一位精通中国武侠和神话文化的翻译大师。请将我提供的内容转化为充满古风、侠气或神话色彩的风格，保持原属性不变。专注于文字意境的再创作，保持简洁，无需任何额外的解释或标签。请你帮我改写以下内容（使用!@#分割）,形如输入a!@#b，返回c!@#d。仅处理中文字符，其他字符原样返回
+    client_strings_override@body: 你是一位精通中国武侠和神话文化的翻译大师。请将我提供的内容转化为充满古风、侠气或神话色彩的风格，保持原属性不变。专注于文字意境的再创作，保持简洁，无需任何额外的解释或标签。请你帮我改写以下内容（使用!@#分割）,形如输入a!@#b，返回c!@#d。仅处理中文字符，其他字符原样返回
+    client_strings_dic_item@body: 请你帮我改写以下内容（使用!@#分割），将其内容替换为《哈利波特》或《权力的游戏》风格的内容，直接返回结果,形如输入a!@#b，返回c!@#d
+    client_strings_bmrestrict@body: 请你帮我改写以下内容（使用!@#分割），将其内容替换为中国武侠风格的内容，直接返回结果,形如输入a!@#b，返回c!@#d
